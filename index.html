@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LED Lamp</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section class="stage">
+    <div class="now" id="now"></div>
+    <div class="ctl">
+      <button class="glass" id="prev" aria-label="Previous set">&#9664;</button>
+      <button class="glass big" id="play" aria-label="Start or stop">&#9654;</button>
+      <button class="glass" id="next" aria-label="Next set">&#9654;&#9654;</button>
+    </div>
+  </section>
+  <div class="bar" id="bar"></div>
+  <ul id="list"></ul>
+  <p class="hint">Tap a set to select it. Drag &#8942;&#8942; to reorder. Press and hold a set to select sets for deleting.</p>
+</main>
+<div class="ov" id="ov"><div class="sheet" id="sheet"></div></div>
+<script src="script.js"></script>
+</body>
+</html>
