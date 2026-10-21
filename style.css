@@ -1,22 +1,22 @@
-:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--c:rgb(30,30,40);--fg:#fff;--mut:rgba(255,255,255,.7);--sh:0 1px 6px rgba(0,0,0,.7)}
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--c:rgb(30,30,40);--fg:#fff;--mut:rgba(255,255,255,.7);--sh:0 1px 4px rgba(0,0,0,.35)}
 *{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--c);color:var(--fg);text-shadow:var(--sh);font:15px/1.4 "Trebuchet MS",system-ui,sans-serif;min-height:100dvh;overflow-x:hidden;-webkit-user-select:none;user-select:none}
 main{position:relative;max-width:520px;margin:0 auto;padding:0 16px 40px}
 .stage{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:62dvh}
-.now{margin:0 0 18px;font-size:15px;min-height:20px}
+.now{margin:0 0 18px;font-size:15px;min-height:20px;color:rgba(255,255,255,.5)}
 .ctl{display:flex;gap:18px;align-items:center;justify-content:center;margin-bottom:22px}
 
-/* fully transparent buttons: no border, no fill */
-.glass{background:transparent;border:0;color:#fff;text-shadow:var(--sh);width:52px;height:52px;font-size:22px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+/* fully transparent buttons: no border, no fill, faint symbol */
+.glass{background:transparent;border:0;color:rgba(255,255,255,.35);text-shadow:var(--sh);width:52px;height:52px;font-size:22px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .glass.big{width:76px;height:76px;font-size:34px}
 .glass:hover{background:transparent}
 .glass:focus-visible{outline:1px solid rgba(255,255,255,.5);border-radius:12px}
 .glass.pill{width:auto;height:40px;padding:0 14px;font-size:15px}
-.glass.danger{color:#ffb0b0}
+.glass.danger{color:rgba(255,176,176,.45)}
 
 .bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;min-height:40px}
-.bar h2{margin:0;font-size:17px;font-weight:600}
+.bar h2{margin:0;font-size:17px;font-weight:600;color:rgba(255,255,255,.5)}
 
 /* list: no borders, no backgrounds */
 #list{list-style:none;margin:0;padding:0;display:grid;gap:4px}
@@ -24,15 +24,15 @@ main{position:relative;max-width:520px;margin:0 auto;padding:0 16px 40px}
 #list li.active{background:rgba(255,255,255,.08)}
 #list li.sel{background:rgba(255,255,255,.16)}
 #list li.dragging{opacity:.7;transform:scale(1.02)}
-.h{touch-action:none;cursor:grab;color:var(--mut);font-size:20px;padding:4px 6px}
+.h{touch-action:none;cursor:grab;color:rgba(255,255,255,.3);font-size:20px;padding:4px 6px}
 .sw{width:42px;height:26px;border-radius:8px;flex:none}
 .nm{flex:1;min-width:0}
-.nm b{display:block;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.nm small{color:var(--mut)}
-.ed{background:none;border:0;color:var(--mut);font-size:17px;padding:6px;cursor:pointer;text-shadow:var(--sh)}
-.hint{color:var(--mut);font-size:13px;margin-top:12px}
+.nm b{display:block;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:rgba(255,255,255,.55)}
+.nm small{color:rgba(255,255,255,.35)}
+.ed{background:none;border:0;color:rgba(255,255,255,.3);font-size:17px;padding:6px;cursor:pointer;text-shadow:var(--sh)}
+.hint{color:rgba(255,255,255,.3);font-size:13px;margin-top:12px}
 
-/* editor: see-through, only a blur behind it so text stays readable */
+/* editor: see-through, blur behind so text stays readable */
 .ov{position:fixed;inset:0;background:transparent;display:none;align-items:flex-end;justify-content:center;z-index:5}
 .ov.on{display:flex}
 .sheet{background:transparent;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);width:100%;max-width:520px;max-height:88dvh;overflow:auto;border-radius:20px 20px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom,0px));-webkit-user-select:text;user-select:text}
@@ -47,13 +47,3 @@ main{position:relative;max-width:520px;margin:0 auto;padding:0 16px 40px}
 .stp .row{margin-bottom:6px}
 .stp label{color:var(--mut);font-size:13px}
 .acts{display:flex;gap:10px;justify-content:space-between;margin-top:14px;flex-wrap:wrap}
-
-/* extra transparent text and icons */
-:root{--sh:0 1px 4px rgba(0,0,0,.20)}
-.glass{color:rgba(255,255,255,.20)}
-.glass.danger{color:rgba(255,176,176,.20)}
-.now,.bar h2{color:rgba(255,255,255,.20)}
-.nm b{color:rgba(255,255,255,.20)}
-.nm small{color:rgba(255,255,255,.20)}
-.h,.ed{color:rgba(255,255,255,.20)}
-.hint{color:rgba(255,255,255,.20)}

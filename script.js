@@ -161,3 +161,6 @@ function sheet(){
 $('#ov').onclick=e=>{if(e.target.id==='ov')$('#ov').classList.remove('on')};
 
 draw();idle();
+
+// ---------- offline support ----------
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});

@@ -1,4 +1,4 @@
-const C = 'led-lamp-v1';
+const C = 'led-lamp-v3';
 const FILES = ['./', 'index.html', 'style.css', 'script.js', 'manifest.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
